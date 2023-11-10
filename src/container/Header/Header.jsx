@@ -138,7 +138,8 @@ const Header = ({ wave, triggerWave }) => {
                 {showMessage && displayText.map((paragraph, index) => (
                   <React.Fragment key={index}>
                     {paragraph}
-                    {index < displayText.length - 1 && <br />}
+                    <br />
+                    <br />
                   </React.Fragment>
                 ))}
               </div>
