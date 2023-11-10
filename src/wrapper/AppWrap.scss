@@ -1,0 +1,35 @@
+// Base styles
+$base-font: 'Helvetica Neue', Arial, sans-serif;
+$base-color: #676767; // Soft grey for text
+$accent-color: #4a90e2; // Light blue for accent
+$background-color: #f9f9f9; // Very light grey for background
+
+// Define a mixin for common text styles
+@mixin text-style {
+  color: $base-color;
+  font-family: $base-font;
+  font-size: 14px; // Moderate font size
+  letter-spacing: 0.5px; // Slight letter spacing
+  line-height: 1.6; // Comfortable line height
+}
+
+// Main container
+.copyright {
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; // Comfortable padding
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+
+  // Paragraph styling
+  .p-text {
+    @include text-style;
+    margin: 5px 0; // Tighter vertical spacing
+
+    &:first-child {
+      color: $accent-color; // Accent color for the first line
+    }
+  }
+}
